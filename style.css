@@ -1,0 +1,473 @@
+/* @import url(responsive/1300px.css) screen and (min-width: 1300px);
+@import url(responsive/1000px.css) screen and (min-width: 1000px);
+@import url(responsive/727.css) screen and (min-width: 727px);
+@import url(responsive/425px.css) screen and (min-width: 425px); */
+
+@font-face {
+    font-family: 'vazir';
+    src: url(fonts/Yekan/Yekan.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --color1: #0d0d0d;
+    --color2: rgba(207, 207, 207, 0.849);
+    --color3: white;
+    --color4: rgba(240, 248, 255, 0.1);
+    --color5: rgb(255, 255, 255);
+}
+
+html {
+    background-color: var(--color1);
+}
+
+body {
+    max-width: 1300px;
+    /* background-color: aqua; */
+    /* height: 100vh; */
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Menu right */
+
+.menu-right {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-right: 1px solid var(--color2);
+    padding: 7px;
+    z-index: 100;
+}
+
+.menu-right ul {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-right ul li {
+    margin: 5px;
+    list-style: none;
+    width: fit-content;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.menu-right ul li a {
+    color: var(--color3);
+    font-size: 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    padding: 0 10px;
+}
+
+.logo {
+    color: var(--color5);
+    font-size: 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px 20px;
+    transition: 0.2s;
+}
+
+.menu-right ul li ion-icon,
+.logo {
+    font-size: 30px;
+    margin-right: 10px;
+    color: var(--color5);
+}
+
+.menu-right ul li:hover {
+    background-color: var(--color4);
+}
+
+.new-tweet {
+    background-color: #168eff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 50px;
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.show-profile {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 10px;
+    justify-content: space-between;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.show-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.show-profile div h6 {
+    color: var(--color3);
+    font-size: 1em;
+}
+
+.show-profile div p {
+    color: var(--color2);
+    font-size: 0.8em;
+}
+
+.show-profile ion-icon {
+    color: var(--color3);
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.show-profile:hover {
+    background-color: var(--color4);
+}
+
+/* content */
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+
+.tweets-container {
+    max-width: 650px;
+    margin-left: 250px;
+    bottom: 0;
+    border-right: 1px solid var(--color2);
+}
+
+.top-of-the-content {
+    position: fixed;
+    top: 0;
+    width: 649px;
+    background-color: var(--color1);
+    z-index: 1000;
+}
+
+.top-of-the-content h5 {
+    font-size: 1.5em;
+    padding: 10px;
+    color: var(--color3);
+}
+
+.for-you-and-following {
+    display: flex;
+    border-bottom: 1px solid var(--color2);
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    border-radius: 50px;
+    bottom: 0;
+    left: 42%;
+    background-color: #168eff;
+}
+
+.for-you-and-following a {
+    position: relative;
+    width: 100%;
+    font-size: 1em;
+    color: var(--color3);
+    text-decoration: none;
+    font-weight: 900;
+    text-align: center;
+    padding: 20px;
+    transition: 0.2s;
+}
+
+.for-you-and-following a:hover {
+    background-color: var(--color4);
+}
+
+.post-container {
+    padding-top: 120px;
+}
+
+.post {
+    height: auto;
+    padding: 10px;
+}
+
+.post-profile {
+    display: flex;
+}
+
+.post-profile p,
+h6 {
+    font-size: 1rem;
+    color: var(--color3);
+    margin: 5px;
+}
+
+.post-profile ion-icon {
+    position: absolute;
+    font-size: 20px;
+    color: var(--color3);
+    margin: 5px;
+    right: 0;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.post-profile ion-icon:hover {
+    background-color: var(--color4);
+}
+
+.post-profile img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.content-post p {
+    font-size: 1em;
+    color: var(--color3);
+}
+
+.content-post {
+    border-bottom: 1px solid var(--color2);
+    padding: 20px;
+}
+
+.content-post img {
+    width: 90%;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.content-post a {
+    color: #168eff;
+}
+
+.content-post p {
+    font-family: 'vazir', sans-serif;
+}
+
+/* sidebar left */
+
+.sidebar-left {
+    width: 400px;
+    float: right;
+    height: 100%;
+}
+
+.search-box {
+    width: 100%;
+    position: fixed;
+    background-color: var(--color1);
+    top: 0;
+    z-index: 1000;
+}
+
+.search {
+    width: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 20px;
+    background-color: var(--color4);
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.search ion-icon {
+    font-size: 30px;
+    color: var(--color3);
+    font-weight: bolder;
+    opacity: 0.5;
+}
+
+.search input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: var(--color3);
+    padding: 5px;
+    font-size: 1em;
+    opacity: 0.5;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search input::placeholder {
+    color: var(--color3);
+}
+
+.sidebar-box {
+    position: fixed;
+    bottom: 0;
+    width: 400px;
+    height: 100%;
+    top: 50px;
+    padding-bottom: 50px;
+    overflow-y: scroll;
+}
+
+.sidebar-box::-webkit-scrollbar {
+    display: none;
+}
+
+.verifi-box {
+    background-color: var(--color4);
+    margin: 20px;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.verifi-box h4 {
+    font-size: 1.3em;
+    color: var(--color3);
+    font-weight: 600;
+}
+
+.verifi-box p {
+    font-size: 1em;
+    color: var(--color3);
+    font-weight: 600;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.verifi-box a {
+    background-color: #168eff;
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:1300px) {
+
+    body {
+        max-width: 1000px;
+    }
+
+    .menu-right {
+        width: auto;
+    }
+
+    .menu-item {
+        display: none;
+    }
+
+    .menu-right ul li {
+        padding: 10px;
+        padding-left: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .new-tweet {
+        padding: 20px 5px;
+        border-radius: 50%;
+        width: 60px;
+    }
+
+    .show-profile div,
+    .show-profile ion-icon {
+        display: none;
+    }
+
+    .post-container {
+        margin: 0;
+    }
+
+    .tweets-container {
+        max-width: 500px;
+        margin-left: 105px;
+    }
+
+    .top-of-the-content {
+        position: fixed;
+        width: 500px;
+        border-right: 1px solid var(--color2);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    body {
+        max-width: 768px;
+    }
+
+    .sidebar-left {
+        display: none;
+    }
+
+    .tweets-container {
+        max-width: 622px;
+    }
+
+    .top-of-the-content {
+        width: 622px;
+    }
+}
+
+@media screen and (max-width:727px) {
+    body {
+        max-width: 450px;
+    }
+
+    .top-of-the-content {
+        width: 345px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    body {
+        max-width: 100%;
+    }
+
+    .menu-right{
+        display: none;
+    }
+
+    .tweets-container {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .top-of-the-content {
+        width: 100%;
+    }
+}
